@@ -5,9 +5,10 @@
     - name: print OS info
       ansible.builtin.package:
         name: apache2
-
-- name: ping host
-  gather_facts: false
+- hosts: webserver
+  become: true        
+    - name: ping host
+      gather_facts: true
   tasks:
     - ping:
         
