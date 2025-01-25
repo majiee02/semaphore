@@ -9,6 +9,6 @@
   become: true        
     - name: ping host
       gather_facts: true
-  tasks:
-    - ping:
+      tasks:
+      - ping:
         
